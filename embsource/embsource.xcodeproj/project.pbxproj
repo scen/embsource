@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C41DCD0517B612BD0029AE5A /* libembryo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C41DCD0417B612940029AE5A /* libembryo.a */; };
+		C41DCD0B17B615160029AE5A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41DCD0A17B615160029AE5A /* main.cpp */; };
+		C46371CF17B6F32300DCC962 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = C46371CE17B6F32300DCC962 /* globals.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C41DCD0317B612940029AE5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C41DCCFF17B612940029AE5A /* libembryo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C438F98117B43D7B00C028FE;
+			remoteInfo = libembryo;
+		};
+		C41DCD0617B612D10029AE5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C41DCCFF17B612940029AE5A /* libembryo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C438F98017B43D7B00C028FE;
+			remoteInfo = libembryo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C41DCCFF17B612940029AE5A /* libembryo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libembryo.xcodeproj; path = /Users/scen/projects/embsource/../libembryo/libembryo.xcodeproj; sourceTree = "<absolute>"; };
+		C41DCD0A17B615160029AE5A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C46371CE17B6F32300DCC962 /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		C477DC8317B611C4005DB56D /* embsource.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = embsource.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C477DC8017B611C4005DB56D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C41DCD0517B612BD0029AE5A /* libembryo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C41DCD0017B612940029AE5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C41DCD0417B612940029AE5A /* libembryo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C41DCD0817B614F00029AE5A /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C46371CE17B6F32300DCC962 /* globals.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		C41DCD0917B614F40029AE5A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C41DCD0A17B615160029AE5A /* main.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		C477DC7A17B611C4005DB56D = {
+			isa = PBXGroup;
+			children = (
+				C41DCCFF17B612940029AE5A /* libembryo.xcodeproj */,
+				C41DCD0817B614F00029AE5A /* Headers */,
+				C41DCD0917B614F40029AE5A /* Source */,
+				C477DC8417B611C4005DB56D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C477DC8417B611C4005DB56D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C477DC8317B611C4005DB56D /* embsource.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C477DC8117B611C4005DB56D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46371CF17B6F32300DCC962 /* globals.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C477DC8217B611C4005DB56D /* embsource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C477DC8717B611C4005DB56D /* Build configuration list for PBXNativeTarget "embsource" */;
+			buildPhases = (
+				C477DC7F17B611C4005DB56D /* Sources */,
+				C477DC8017B611C4005DB56D /* Frameworks */,
+				C477DC8117B611C4005DB56D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C41DCD0717B612D10029AE5A /* PBXTargetDependency */,
+			);
+			name = embsource;
+			productName = embsource;
+			productReference = C477DC8317B611C4005DB56D /* embsource.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C477DC7B17B611C4005DB56D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = stanleycen;
+			};
+			buildConfigurationList = C477DC7E17B611C4005DB56D /* Build configuration list for PBXProject "embsource" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C477DC7A17B611C4005DB56D;
+			productRefGroup = C477DC8417B611C4005DB56D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C41DCD0017B612940029AE5A /* Products */;
+					ProjectRef = C41DCCFF17B612940029AE5A /* libembryo.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C477DC8217B611C4005DB56D /* embsource */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C41DCD0417B612940029AE5A /* libembryo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libembryo.a;
+			remoteRef = C41DCD0317B612940029AE5A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C477DC7F17B611C4005DB56D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C41DCD0B17B615160029AE5A /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C41DCD0717B612D10029AE5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libembryo;
+			targetProxy = C41DCD0617B612D10029AE5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C477DC8517B611C4005DB56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include /usr/local/include";
+			};
+			name = Debug;
+		};
+		C477DC8617B611C4005DB56D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include /usr/local/include";
+			};
+			name = Release;
+		};
+		C477DC8817B611C4005DB56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C477DC8917B611C4005DB56D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C477DC7E17B611C4005DB56D /* Build configuration list for PBXProject "embsource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C477DC8517B611C4005DB56D /* Debug */,
+				C477DC8617B611C4005DB56D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C477DC8717B611C4005DB56D /* Build configuration list for PBXNativeTarget "embsource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C477DC8817B611C4005DB56D /* Debug */,
+				C477DC8917B611C4005DB56D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C477DC7B17B611C4005DB56D /* Project object */;
+}
