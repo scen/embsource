@@ -10,6 +10,8 @@
 		C41DCD0517B612BD0029AE5A /* libembryo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C41DCD0417B612940029AE5A /* libembryo.a */; };
 		C41DCD0B17B615160029AE5A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41DCD0A17B615160029AE5A /* main.cpp */; };
 		C46371CF17B6F32300DCC962 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = C46371CE17B6F32300DCC962 /* globals.h */; };
+		C4FAEAB317B70BCF0030F32C /* sdk.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FAEAB217B70BCF0030F32C /* sdk.h */; };
+		C4FAEAB517B70DB10030F32C /* globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4FAEAB417B70DB10030F32C /* globals.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		C41DCD0A17B615160029AE5A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C46371CE17B6F32300DCC962 /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
 		C477DC8317B611C4005DB56D /* embsource.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = embsource.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4FAEAB217B70BCF0030F32C /* sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdk.h; sourceTree = "<group>"; };
+		C4FAEAB417B70DB10030F32C /* globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = globals.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				C46371CE17B6F32300DCC962 /* globals.h */,
+				C4FAEAB217B70BCF0030F32C /* sdk.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -68,14 +73,23 @@
 			isa = PBXGroup;
 			children = (
 				C41DCD0A17B615160029AE5A /* main.cpp */,
+				C4FAEAB417B70DB10030F32C /* globals.cpp */,
 			);
 			name = Source;
+			sourceTree = "<group>";
+		};
+		C46371D017B6FBBC00DCC962 /* Source SDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Source SDK";
 			sourceTree = "<group>";
 		};
 		C477DC7A17B611C4005DB56D = {
 			isa = PBXGroup;
 			children = (
 				C41DCCFF17B612940029AE5A /* libembryo.xcodeproj */,
+				C46371D017B6FBBC00DCC962 /* Source SDK */,
 				C41DCD0817B614F00029AE5A /* Headers */,
 				C41DCD0917B614F40029AE5A /* Source */,
 				C477DC8417B611C4005DB56D /* Products */,
@@ -98,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46371CF17B6F32300DCC962 /* globals.h in Headers */,
+				C4FAEAB317B70BCF0030F32C /* sdk.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C41DCD0B17B615160029AE5A /* main.cpp in Sources */,
+				C4FAEAB517B70DB10030F32C /* globals.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +226,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -237,6 +254,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include /usr/local/include";
@@ -248,7 +266,26 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				EXECUTABLE_PREFIX = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/source_sdk/mp/game/bin\"",
+					"\"$(SRCROOT)/source_sdk/mp/game/mod_hl2mp/bin\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/game/client/obj_client_hl2mp_osx32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/game/server/obj_server_hl2mp_osx32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/linux32\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/linux32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/osx32\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/osx32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/public\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/public/linux32\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/public/osx32\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/win32/debug/vs2010\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/win32/release/vs2010\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/materialsystem/stdshaders/obj_shaders_hl2mp_osx32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/utils/serverplugin_sample/obj_serverplugin_empty_osx32/release\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include /usr/local/include";
 			};
 			name = Debug;
 		};
@@ -257,7 +294,26 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				EXECUTABLE_PREFIX = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/source_sdk/mp/game/bin\"",
+					"\"$(SRCROOT)/source_sdk/mp/game/mod_hl2mp/bin\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/game/client/obj_client_hl2mp_osx32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/game/server/obj_server_hl2mp_osx32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/linux32\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/linux32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/osx32\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/osx32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/public\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/public/linux32\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/public/osx32\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/win32/debug/vs2010\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/lib/win32/release/vs2010\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/materialsystem/stdshaders/obj_shaders_hl2mp_osx32/release\"",
+					"\"$(SRCROOT)/source_sdk/mp/src/utils/serverplugin_sample/obj_serverplugin_empty_osx32/release\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include /usr/local/include";
 			};
 			name = Release;
 		};
