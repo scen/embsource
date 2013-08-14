@@ -4,6 +4,7 @@
 #include "sdk.h"
 
 #include "offsets.h"
+#include "netvar.h"
 
 #include <libembryo/logger.h>
 #include <libembryo/module.h>
@@ -23,8 +24,8 @@ namespace embsource
         
         void *globalVarsBase;
 
-        void *client;
-        void *engine;
+        CHLClient *client;
+        CEngineClient *engine;
         void *cvar;
         CPanel *panel;
         void *ent;
@@ -34,6 +35,7 @@ namespace embsource
         ISurface *surface;
         void *matSystem;
         void *debugOverlay;
+        void *input;
 
         embryo::module *clientMod;
         embryo::module *engineMod;
@@ -44,6 +46,8 @@ namespace embsource
         embryo::vmt *clientHook;
 
         unsigned int panelDraw;
+        
+        netvar nvar;
     private:
         bool byteTextCompare(const unsigned char *addr, const char *text);
     };

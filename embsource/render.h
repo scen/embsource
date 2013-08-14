@@ -21,6 +21,8 @@ namespace embsource
         virtual void outlineRect(const embryo::rect<int> &r, const embryo::color &col);
 
         font uiFont;
+        
+        embryo::size<int> screen;
     };
 
     extern globals glob;

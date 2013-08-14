@@ -81,8 +81,8 @@ namespace embsource
         
         getClientDLLInitVars();
         
-        glob.client       = glob.clientFactory(clientName, NULL);
-        glob.engine       = glob.appSysFactory(engineName, NULL);
+        glob.client       = (CHLClient *)glob.clientFactory(clientName, NULL);
+        glob.engine       = (CEngineClient *)glob.appSysFactory(engineName, NULL);
         glob.cvar         = glob.appSysFactory(cvarName, NULL);
         glob.panel        = (CPanel *)glob.appSysFactory(vguiPanelName, NULL);
         glob.ent          = glob.clientFactory(entName, NULL);
@@ -92,6 +92,21 @@ namespace embsource
         glob.surface      = (ISurface *)glob.appSysFactory(surfaceName, NULL);
         glob.matSystem    = glob.appSysFactory(matSysName, NULL);
         glob.debugOverlay = glob.engineFactory(debugOverlayName, NULL);
+        
+        // Retrieve CInput pointer; it's at EAX + some offset
+        unsigned int *clientVMT = *(unsigned int **)glob.client;
+        
+        embryo::sigscan inputBaseScan(embryo::signature("e8 00 00 00 00"), (void *)clientVMT[offsets::IN_ActivateMouse], 0x100);
+        unsigned int inputBase = (unsigned int)inputBaseScan.find();
+        DUMP_VAR(inputBase);
+        if (!inputBase) return NULL;
+        
+        embryo::sigscan inputOffsetScan(embryo::signature("8b 80"), (void *)clientVMT[offsets::IN_ActivateMouse], 0x100);
+        unsigned int inputOffset = (unsigned int)inputOffsetScan.find();
+        DUMP_VAR(inputOffset);
+        if (!inputOffset) return NULL;
+        
+        glob.input = (void *)**(unsigned int ***)(inputBase + 0x5 + *(unsigned int *)(inputOffset + 0x2));
         
         DUMP_VAR(glob.client);
         DUMP_VAR(glob.engine);
@@ -104,13 +119,18 @@ namespace embsource
         DUMP_VAR(glob.surface);
         DUMP_VAR(glob.matSystem);
         DUMP_VAR(glob.debugOverlay);
+        DUMP_VAR(glob.input);
         
         rend.init();
+        
+        glob.nvar = netvar(glob.client);
+        glob.nvar.init();
         
         glob.panelHook = new embryo::vmt(glob.panel);
         glob.panelHook->hookMethod((void *)&hooks::hkPaintTraverse, offsets::PaintTraverse);
         
         glob.clientHook = new embryo::vmt(glob.client);
+//        glob.clientHook->hookMethod((void *)&hooks::hkWriteUsercmdDeltaToBuffer, offsets::WriteUsercmdDeltaToBuffer);
         
         return NULL;
     }
@@ -129,5 +149,5 @@ void unload()
     embsource::glob.panelHook->unhook();
     embsource::glob.panelHook->poof();
     
-    embryo::log().info("unloading module");
+    embryo::log().warn("unloading module");
 }

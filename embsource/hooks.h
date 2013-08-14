@@ -11,6 +11,7 @@ namespace embsource
     {
     public:
         static void hkPaintTraverse(void *thisptr, unsigned int panel, bool forceRepaint, bool allowForce);
+        static bool hkWriteUsercmdDeltaToBuffer(void *thisptr, unsigned int *buf, int from, int to, bool isnewcommand);
     };
 
     extern globals glob;

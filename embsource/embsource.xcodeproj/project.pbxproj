@@ -15,6 +15,10 @@
 		C41DCD0517B612BD0029AE5A /* libembryo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C41DCD0417B612940029AE5A /* libembryo.a */; };
 		C41DCD0B17B615160029AE5A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41DCD0A17B615160029AE5A /* main.cpp */; };
 		C46371CF17B6F32300DCC962 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = C46371CE17B6F32300DCC962 /* globals.h */; };
+		C47EC7BC17BB387C00722B9F /* dt_recv.h in Headers */ = {isa = PBXBuildFile; fileRef = C47EC7BB17BB387C00722B9F /* dt_recv.h */; };
+		C47EC7BE17BB38B100722B9F /* dt_common.h in Headers */ = {isa = PBXBuildFile; fileRef = C47EC7BD17BB38B100722B9F /* dt_common.h */; };
+		C47EC7C017BB3C1E00722B9F /* netvar.h in Headers */ = {isa = PBXBuildFile; fileRef = C47EC7BF17BB3C1E00722B9F /* netvar.h */; };
+		C47EC7C217BB3C2600722B9F /* netvar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47EC7C117BB3C2600722B9F /* netvar.cpp */; };
 		C4FAEAB317B70BCF0030F32C /* sdk.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FAEAB217B70BCF0030F32C /* sdk.h */; };
 		C4FAEAB517B70DB10030F32C /* globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4FAEAB417B70DB10030F32C /* globals.cpp */; };
 		C4FD001817B8524C0014D571 /* sigs.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FD001717B8524C0014D571 /* sigs.h */; };
@@ -49,6 +53,10 @@
 		C41DCD0A17B615160029AE5A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C46371CE17B6F32300DCC962 /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
 		C477DC8317B611C4005DB56D /* embsource.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = embsource.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47EC7BB17BB387C00722B9F /* dt_recv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dt_recv.h; path = source_sdk/dt_recv.h; sourceTree = "<group>"; };
+		C47EC7BD17BB38B100722B9F /* dt_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dt_common.h; path = source_sdk/dt_common.h; sourceTree = "<group>"; };
+		C47EC7BF17BB3C1E00722B9F /* netvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netvar.h; sourceTree = "<group>"; };
+		C47EC7C117BB3C2600722B9F /* netvar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = netvar.cpp; sourceTree = "<group>"; };
 		C4FAEAB217B70BCF0030F32C /* sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdk.h; sourceTree = "<group>"; };
 		C4FAEAB417B70DB10030F32C /* globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = globals.cpp; sourceTree = "<group>"; };
 		C4FD001717B8524C0014D571 /* sigs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigs.h; sourceTree = "<group>"; };
@@ -79,6 +87,7 @@
 		C41DCD0817B614F00029AE5A /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				C47EC7B917BB383700722B9F /* Source SDK */,
 				C4196DA917B93D5A00B30F93 /* offsets.h */,
 				C4FD001717B8524C0014D571 /* sigs.h */,
 				C46371CE17B6F32300DCC962 /* globals.h */,
@@ -86,6 +95,7 @@
 				C4FD001917B87A6C0014D571 /* hooks.h */,
 				C4196D9B17B8C13B00B30F93 /* font.h */,
 				C4196D9D17B8C14700B30F93 /* render.h */,
+				C47EC7BF17BB3C1E00722B9F /* netvar.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -98,6 +108,7 @@
 				C4FAEAB417B70DB10030F32C /* globals.cpp */,
 				C4FD001B17B87A730014D571 /* hooks.cpp */,
 				C4196DAB17B93E9C00B30F93 /* font.cpp */,
+				C47EC7C117BB3C2600722B9F /* netvar.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -120,6 +131,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C47EC7B917BB383700722B9F /* Source SDK */ = {
+			isa = PBXGroup;
+			children = (
+				C47EC7BB17BB387C00722B9F /* dt_recv.h */,
+				C47EC7BD17BB38B100722B9F /* dt_common.h */,
+			);
+			name = "Source SDK";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -134,6 +154,9 @@
 				C4196D9C17B8C13B00B30F93 /* font.h in Headers */,
 				C4196D9E17B8C14700B30F93 /* render.h in Headers */,
 				C4196DAA17B93D5A00B30F93 /* offsets.h in Headers */,
+				C47EC7BC17BB387C00722B9F /* dt_recv.h in Headers */,
+				C47EC7BE17BB38B100722B9F /* dt_common.h in Headers */,
+				C47EC7C017BB3C1E00722B9F /* netvar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +233,7 @@
 				C4FD001C17B87A730014D571 /* hooks.cpp in Sources */,
 				C4196DAC17B93E9C00B30F93 /* font.cpp in Sources */,
 				C4196DAE17B9439A00B30F93 /* render.cpp in Sources */,
+				C47EC7C217BB3C2600722B9F /* netvar.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_X86_VECTOR_INSTRUCTIONS = sse4.2;
 				EXECUTABLE_PREFIX = "";
 				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -348,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_X86_VECTOR_INSTRUCTIONS = sse4.2;
 				EXECUTABLE_PREFIX = "";
 				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";

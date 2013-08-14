@@ -20,8 +20,12 @@ namespace embsource
 
         if (panel == glob.panelDraw)
         {
-            rend.fillRect(embryo::makerect(embryo::makepoint(100, 100), embryo::makesize(100, 100)), embryo::color::blue());
-            rend.drawText(embryo::makepoint(300, 300), rend.uiFont, embryo::color::green(), "Hello world OSX");
+            
         }
+    }
+    
+    bool hooks::hkWriteUsercmdDeltaToBuffer(void *thisptr, unsigned int *buf, int from, int to, bool isnewcommand)
+    {
+        
     }
 }
