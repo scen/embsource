@@ -130,7 +130,7 @@ namespace embsource
         glob.panelHook->hookMethod((void *)&hooks::hkPaintTraverse, offsets::PaintTraverse);
         
         glob.clientHook = new embryo::vmt(glob.client);
-//        glob.clientHook->hookMethod((void *)&hooks::hkWriteUsercmdDeltaToBuffer, offsets::WriteUsercmdDeltaToBuffer);
+        glob.clientHook->hookMethod((void *)&hooks::hkWriteUsercmdDeltaToBuffer, offsets::WriteUsercmdDeltaToBuffer);
         
         return NULL;
     }
