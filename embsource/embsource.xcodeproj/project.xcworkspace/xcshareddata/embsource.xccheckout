@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D205E632-925B-45F1-B03F-D15D2183E805</string>
+	<key>IDESourceControlProjectName</key>
+	<string>embsource</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>53496F5945B48FA91AD3D17986EC6442A47C519C</key>
+		<string>https://github.com/scen/embsource.git</string>
+		<key>8A57AC97D8007261196265AEC3E54BB98ADC6D66</key>
+		<string>https://github.com/scen/libembryo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>embsource/embsource.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>53496F5945B48FA91AD3D17986EC6442A47C519C</key>
+		<string>../../..</string>
+		<key>8A57AC97D8007261196265AEC3E54BB98ADC6D66</key>
+		<string>../../../../libembryo</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/scen/embsource.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>53496F5945B48FA91AD3D17986EC6442A47C519C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>53496F5945B48FA91AD3D17986EC6442A47C519C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>embsource</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8A57AC97D8007261196265AEC3E54BB98ADC6D66</string>
+			<key>IDESourceControlWCCName</key>
+			<string>libembryo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

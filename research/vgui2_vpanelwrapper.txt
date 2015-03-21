@@ -1,0 +1,110 @@
+// Auto reconstructed from vtable block @ 0x0002E064
+// from "vgui2.dylib", by ida_vtables.idc
+0	VPanelWrapper::~VPanelWrapper()
+1	VPanelWrapper::~VPanelWrapper()
+2	VPanelWrapper::Init(unsigned int,vgui::IClientPanel *)
+3	VPanelWrapper::SetPos(unsigned int,int,int)
+4	VPanelWrapper::GetPos(unsigned int,int &,int &)
+5	VPanelWrapper::SetSize(unsigned int,int,int)
+6	VPanelWrapper::GetSize(unsigned int,int &,int &)
+7	VPanelWrapper::SetMinimumSize(unsigned int,int,int)
+8	VPanelWrapper::GetMinimumSize(unsigned int,int &,int &)
+9	VPanelWrapper::SetZPos(unsigned int,int)
+10	VPanelWrapper::GetZPos(unsigned int)
+11	VPanelWrapper::GetAbsPos(unsigned int,int &,int &)
+12	VPanelWrapper::GetClipRect(unsigned int,int &,int &,int &,int &)
+13	VPanelWrapper::SetInset(unsigned int,int,int,int,int)
+14	VPanelWrapper::GetInset(unsigned int,int &,int &,int &,int &)
+15	VPanelWrapper::SetVisible(unsigned int,bool)
+16	VPanelWrapper::IsVisible(unsigned int)
+17	VPanelWrapper::SetParent(unsigned int,unsigned int)
+18	VPanelWrapper::GetChildCount(unsigned int)
+19	VPanelWrapper::GetChild(unsigned int,int)
+20	VPanelWrapper::GetChildren(unsigned int)
+21	VPanelWrapper::GetParent(unsigned int)
+22	VPanelWrapper::MoveToFront(unsigned int)
+23	VPanelWrapper::MoveToBack(unsigned int)
+24	VPanelWrapper::HasParent(unsigned int,unsigned int)
+25	VPanelWrapper::IsPopup(unsigned int)
+26	VPanelWrapper::SetPopup(unsigned int,bool)
+27	VPanelWrapper::IsFullyVisible(unsigned int)
+28	VPanelWrapper::GetScheme(unsigned int)
+29	VPanelWrapper::IsProportional(unsigned int)
+30	VPanelWrapper::IsAutoDeleteSet(unsigned int)
+31	VPanelWrapper::DeletePanel(unsigned int)
+32	VPanelWrapper::SetKeyBoardInputEnabled(unsigned int,bool)
+33	VPanelWrapper::SetMouseInputEnabled(unsigned int,bool)
+34	VPanelWrapper::IsKeyBoardInputEnabled(unsigned int)
+35	VPanelWrapper::IsMouseInputEnabled(unsigned int)
+36	VPanelWrapper::Solve(unsigned int)
+37	VPanelWrapper::GetName(unsigned int)
+38	VPanelWrapper::GetClassName(unsigned int)
+39	VPanelWrapper::SendMessage(unsigned int,KeyValues *,unsigned int)
+40	VPanelWrapper::Think(unsigned int)
+41	VPanelWrapper::PerformApplySchemeSettings(unsigned int)
+42	VPanelWrapper::PaintTraverse(unsigned int,bool,bool)
+43	VPanelWrapper::Repaint(unsigned int)
+44	VPanelWrapper::IsWithinTraverse(unsigned int,int,int,bool)
+45	VPanelWrapper::OnChildAdded(unsigned int,unsigned int)
+46	VPanelWrapper::OnSizeChanged(unsigned int,int,int)
+47	VPanelWrapper::InternalFocusChanged(unsigned int,bool)
+48	VPanelWrapper::RequestInfo(unsigned int,KeyValues *)
+49	VPanelWrapper::RequestFocus(unsigned int,int)
+50	VPanelWrapper::RequestFocusPrev(unsigned int,unsigned int)
+51	VPanelWrapper::RequestFocusNext(unsigned int,unsigned int)
+52	VPanelWrapper::GetCurrentKeyFocus(unsigned int)
+53	VPanelWrapper::GetTabPosition(unsigned int)
+54	VPanelWrapper::Plat(unsigned int)
+55	VPanelWrapper::SetPlat(unsigned int,vgui::SurfacePlat *)
+56	VPanelWrapper::GetPanel(unsigned int,char const*)
+57	VPanelWrapper::IsEnabled(unsigned int)
+58	VPanelWrapper::SetEnabled(unsigned int,bool)
+59	VPanelWrapper::IsTopmostPopup(unsigned int)
+60	VPanelWrapper::SetTopmostPopup(unsigned int,bool)
+61	VPanelWrapper::SetSiblingPin(unsigned int,unsigned int,unsigned char,unsigned char)
+62	VPanelWrapper::Client(unsigned int)
+63	VPanelWrapper::GetModuleName(unsigned int)
+64	dword_0
+65	dword_0
+66	`vtable for'__cxxabiv1::__si_class_type_info
+67	`typeinfo name for'vgui::IPanel
+68	`typeinfo for'IBaseInterface
+69	dword_0
+70	`vtable for'__cxxabiv1::__si_class_type_info
+71	`typeinfo name for'VPanelWrapper
+72	`typeinfo for'vgui::IPanel
+73	dword_0
+74	dword_0
+75	`typeinfo for'CDefaultAccessor
+76	CDefaultAccessor::RegisterConCommandBase(ConCommandBase *)
+77	dword_0
+78	`vtable for'__cxxabiv1::__class_type_info
+79	`typeinfo name for'IConVar
+80	`vtable for'__cxxabiv1::__class_type_info
+81	`typeinfo name for'IConCommandBaseAccessor
+82	`vtable for'__cxxabiv1::__si_class_type_info
+83	`typeinfo name for'CDefaultAccessor
+84	`typeinfo for'IConCommandBaseAccessor
+85	dword_0
+86	dword_0
+87	`typeinfo for'CEmptyConVar
+88	CEmptyConVar::~CEmptyConVar()
+89	CEmptyConVar::~CEmptyConVar()
+90	ConVar::IsCommand(void)const
+91	CEmptyConVar::IsFlagSet(int)const
+92	ConVar::AddFlags(int)
+93	CEmptyConVar::GetName(void)const
+94	ConVar::GetHelpText(void)const
+95	ConVar::IsRegistered(void)const
+96	ConCommandBase::GetDLLIdentifier(void)const
+97	ConCommandBase::CreateBase(char const*,char const*,int)
+98	ConVar::Init(void)
+99	CEmptyConVar::SetValue(char const*)
+100	CEmptyConVar::SetValue(float)
+101	CEmptyConVar::SetValue(int)
+102	ConVar::InternalSetValue(char const*)
+103	ConVar::InternalSetFloatValue(float)
+104	ConVar::InternalSetIntValue(int)
+105	ConVar::ClampValue(float &)
+106	ConVar::ChangeStringValue(char const*,float)
+107	ConVar::Create(char const*,char const*,int,char const*,bool,float,bool,float,void (*)(IConVar *,char const*,float))

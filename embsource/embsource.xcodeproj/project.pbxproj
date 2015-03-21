@@ -365,7 +365,7 @@
 				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include /usr/local/include";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include /usr/local/include ~/projects/**";
 			};
 			name = Debug;
 		};
@@ -377,8 +377,9 @@
 				EXECUTABLE_PREFIX = "";
 				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include /usr/local/include";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include /usr/local/include ~/projects/**";
 			};
 			name = Release;
 		};

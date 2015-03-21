@@ -23,6 +23,8 @@ namespace embsource
         // EBX is loaded from the rel CALL near the beginning that looks like
         // E8 00 00 00 00. This will push the next EIP onto the stack
         // where POP EBX loads the address into EBX
+        // steps:
+        // find symbol ClientDLL_Init(), should be obvious from there
         
         embryo::signature popEBXSig(sigs::popEBXSigStr);
         embryo::sigscan popEBXScan(popEBXSig, *glob.engineMod);
@@ -30,7 +32,9 @@ namespace embsource
         embryo::signature appSysFactorySig(sigs::appSysFactoryStr);
         embryo::sigscan appSysFactoryScan(appSysFactorySig, *glob.engineMod);
         
-        unsigned int EBX = (unsigned int)popEBXScan.find();
+        unsigned int EBX = (unsigned int)popEBXScan.find() - 0x45;
+        
+        DUMP_VAR(EBX);
         
         if (!EBX)
         {
@@ -45,6 +49,8 @@ namespace embsource
             embryo::log().error("appSysFactoryScan returned NULL");
             return 0;
         }
+        
+        DUMP_VAR(appSysFactoryRes);
         
         glob.appSysFactory = **(CreateInterfaceFn **)(EBX + *(unsigned int *)(appSysFactoryRes + 0x2));
         glob.globalVarsBase = *(void **)(EBX + *(unsigned int *)(appSysFactoryRes + 0x8 + 0x2));
